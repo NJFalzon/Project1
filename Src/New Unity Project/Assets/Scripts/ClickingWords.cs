@@ -5,8 +5,11 @@ using UnityEngine;
 public class ClickingWords : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
-    private string LastClickedWord;
     List<Interactables> link;
+
+    [SerializeField] Texture2D pointer;
+    [SerializeField] Texture2D cursor;
+    CursorMode cm = CursorMode.Auto;
 
     private void Start()
     {
@@ -17,12 +20,11 @@ public class ClickingWords : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        int click = TMP_TextUtilities.FindIntersectingLink(text, Input.mousePosition, null);
+        if (click != -1)
         {
-            int click = TMP_TextUtilities.FindIntersectingLink(text, Input.mousePosition, null); 
-
-
-            if(click != -1)
+            Cursor.SetCursor(pointer, Vector2.zero, cm);
+            if (Input.GetMouseButtonDown(0))
             {
                 transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = link[click].GetTitle();
                 transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = link[click].GetText();
@@ -32,6 +34,10 @@ public class ClickingWords : MonoBehaviour
                 transform.GetChild(5).GetComponentInChildren<TextMeshProUGUI>().text = link[click].GetAnswer3();
                 transform.GetChild(6).GetComponentInChildren<TextMeshProUGUI>().text = link[click].GetAnswer4();
             }
+        }
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, cm);
         }
     }
 }
