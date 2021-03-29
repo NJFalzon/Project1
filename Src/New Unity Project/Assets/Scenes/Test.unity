@@ -214,6 +214,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1579603622}
   styleSheet: {fileID: 11400000, guid: f952c082cb03451daed3ee968ac6c63e, type: 2}
+  textInfo:
+    textComponent: {fileID: 0}
+    characterCount: 0
+    spriteCount: 0
+    spaceCount: 0
+    wordCount: 0
+    linkCount: 0
+    lineCount: 0
+    pageCount: 0
+    materialCount: 0
 --- !u!1 &597925773
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,9 +446,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<style="l0">Lorem ipsum dolor sit</style> amet consectetur adipiscing
-    elit. Maecenas porttitor cursus volutpat. Morbi sed neque non sem mollis ullamcorper.
-    <link><mark=#ffff0050>Fusce dapibus ligula justo</mark></link>, quis ullamcorper
+  m_text: '<link=link0><mark=#ffff0050>Lorem ipsum dolor sit</mark></link> amet consectetur
+    adipiscing elit. Maecenas porttitor cursus volutpat. Morbi sed neque non sem
+    mollis ullamcorper. <link>Fusce dapibus ligula justo</link>, quis ullamcorper
     dolor dignissim a. Phasellus nec ipsum facilisis, accumsan augue id, iaculis
     nulla. Donec velit justo, dapibus ut ex vel, molestie iaculis dolor. Sed accumsan
     orci non aliquam commodo. Vestibulum pretium ipsum magna, vel vulputate magna
