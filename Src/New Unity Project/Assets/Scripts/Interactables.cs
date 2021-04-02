@@ -2,29 +2,20 @@
 {
     private string title;
     private string text;
-    private bool answer1;
-    private bool answer2;
-    private bool answer3;
-    private bool answer4;
+    private bool[] answers;
 
     public Interactables()
     {
         title = "";
         text = "";
-        answer1 = false;
-        answer2 = false;
-        answer3 = false;
-        answer4 = false;
+        answers = new bool[4];
     }
 
-    public Interactables(string title, string text,  bool answer1, bool answer2, bool answer3, bool answer4)
+    public Interactables(string title, string text, bool[] answers)
     {
         this.title = title;
         this.text = text;
-        this.answer1 = answer1;
-        this.answer2 = answer2;
-        this.answer3 = answer3;
-        this.answer4 = answer4;
+        this.answers = answers;
     }
 
     public string GetTitle()
@@ -37,24 +28,9 @@
         return text;
     }
 
-    public bool GetAnswer1()
+    public bool[] GetAnswers()
     {
-        return answer1;
-    }
-
-    public bool GetAnswer2()
-    {
-        return answer2;
-    }
-
-    public bool GetAnswer3()
-    {
-        return answer3;
-    }
-
-    public bool GetAnswer4()
-    {
-        return answer4;
+        return answers;
     }
 
 
@@ -68,23 +44,8 @@
         this.text = text;
     }
 
-    public void SetAnswer1(bool answer1)
+    public void SetAnswers(bool[] answers)
     {
-        this.answer1 = answer1;
-    }
-
-    public void SetAnswer2(bool answer2)
-    {
-        this.answer2 = answer2;
-    }
-
-    public void SetAnswer3(bool answer3)
-    {
-        this.answer3 = answer3;
-    }
-
-    public void SetAnswer4(bool answer4)
-    {
-        this.answer4 = answer4;
+        this.answers = answers;
     }
 }

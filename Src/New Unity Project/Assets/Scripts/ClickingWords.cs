@@ -15,8 +15,8 @@ public class ClickingWords : MonoBehaviour
     private void Start()
     {
         link = new List<Interactables>();
-        link.Add(new Interactables("Lorem Ipsum Sit Amet", "Generic Words to show a full looking text", false, false, false, false));
-        link.Add(new Interactables("Fusce dapibus ligula justo", "More text because testing", false, false, false, false));
+        link.Add(new Interactables("Lorem Ipsum Sit Amet", "Generic Words to show a full looking text", new bool[4] { true, false, false, true }));
+        link.Add(new Interactables("Fusce dapibus ligula justo", "More text because testing", new bool[4] { false, true, false, true }));
     }
 
     private void Update()
@@ -38,27 +38,32 @@ public class ClickingWords : MonoBehaviour
         }
     }
 
+    
     public void Answer1()
     {
-        link[click].SetAnswer1(!link[click].GetAnswer1());
-        print(link[click].GetAnswer1());
+        bool[] temp = link[click].GetAnswers();
+        temp[0] = !temp[0];
+        link[click].SetAnswers(temp);
     }
 
     public void Answer2()
     {
-        link[click].SetAnswer2(!link[click].GetAnswer2());
-        print(link[click].GetAnswer2());
+        bool[] temp = link[click].GetAnswers();
+        temp[1] = !temp[1];
+        link[click].SetAnswers(temp);
     }
 
     public void Answer3()
     {
-        link[click].SetAnswer3(!link[click].GetAnswer3());
-        print(link[click].GetAnswer3());
+        bool[] temp = link[click].GetAnswers();
+        temp[2] = !temp[2];
+        link[click].SetAnswers(temp);
     }
 
     public void Answer4()
     {
-        link[click].SetAnswer4(!link[click].GetAnswer4());
-        print(link[click].GetAnswer4());
+        bool[] temp = link[click].GetAnswers();
+        temp[3] = !temp[3];
+        link[click].SetAnswers(temp);
     }
 }

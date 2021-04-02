@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 308975070}
   - component: {fileID: 308975069}
   - component: {fileID: 308975071}
+  - component: {fileID: 308975072}
   m_Layer: 5
   m_Name: Thesis
   m_TagString: Untagged
@@ -597,6 +598,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 308975069}
+--- !u!114 &308975072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308975067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 356e2d19bbcdaf54e92409901ed54350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: Assets/Resources/Default.txt
 --- !u!1 &497028218
 GameObject:
   m_ObjectHideFlags: 0

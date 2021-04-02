@@ -36,7 +36,7 @@ public class Test : MonoBehaviour
                 }
                 else if (temptxt.Contains(linkid + redMark))
                 {
-                    transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + redMark     , linkid + greenMark);
+                    transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + redMark, linkid + greenMark);
                 }
             }
 
