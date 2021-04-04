@@ -1,4 +1,7 @@
-﻿public class Interactables
+﻿using System.Collections.Generic;
+
+[System.Serializable]
+public class Interactables
 {
     private string title;
     private string text;
@@ -47,5 +50,31 @@
     public void SetAnswers(bool[] answers)
     {
         this.answers = answers;
+    }
+
+    public string ToString(string title)
+    {
+        string txt = title + "\n" + text + "\n" + Boolstring();
+        
+        return txt;
+    }
+
+    string Boolstring()
+    {
+        string[] temp = new string[4];
+
+        for (int n = 0; n < temp.Length; n++)
+        {
+            if (answers[n])
+            {
+                temp[n] = "true";
+            }
+            else
+            {
+                temp[n] = "false";
+            }
+        }
+
+        return temp[0] + "\n" + temp[1] + "\n" + temp[2] + "\n" + temp[3] + "\n";
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoadText : MonoBehaviour
 {
     [SerializeField] string path;
-    void Start()
+    void Awake()
     {
         ReadText();
     }
