@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using Unity.Mathematics;
+using UnityEngine;
 
-[System.Serializable]
-public class Interactables
+public class Interactables : MonoBehaviour
 {
     private string title;
     private string text;
@@ -76,5 +78,43 @@ public class Interactables
         }
 
         return temp[0] + "\n" + temp[1] + "\n" + temp[2] + "\n" + temp[3] + "\n";
+    }
+
+    public Interactables ToInteractables(StreamReader reader)
+    {
+        Interactables tempI = new Interactables();
+
+        tempI.SetTitle(reader.ReadLine());
+        tempI.SetText(reader.ReadLine());
+
+        bool[] temp = new bool[4];
+        for (int j = 0; j < temp.Length; j++)
+        {
+            if (reader.ReadLine() == "true")
+            {
+                temp[j] = true;
+            }
+            else
+            {
+                temp[j] = false;
+            }
+            tempI.SetAnswers(temp);
+        }
+        
+        return tempI;
+    }
+
+    public int2 Compare(Interactables b)
+    {
+        int2 points= new int2(0,0);
+        for (int i = 0; i<4; i++)
+        {
+            if(answers[i] == b.answers[i])
+            {
+                points.x++;
+            }
+            points.y++;
+        }
+        return points;
     }
 }
