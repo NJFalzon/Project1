@@ -1,0 +1,180 @@
+(SARS-CoV-2)
+Proper name of the virus​
+false
+false
+false
+true
+with more than 2 million of the world’s population infected (irrelevat- a LOT more cases)
+There are now over 167 million registered cases of COVID-19 worldwide ​
+false
+false
+true
+false
+low transmission rate
+Malta currently has a low transmission rate, with an average of less than 10 cases per day currently ​​
+false
+false
+true
+false
+a total confirmed cases of 444
+Malta has over of 30,500 confirmed cases​
+false
+false
+true
+false
+of which 276 are active cases
+Malta has around 72 active cases ​​​
+false
+false
+true
+false
+165 have recovered and there were three deaths.
+Malta has 30,000 recoveries and  and 417 total deaths ​​​
+false
+false
+true
+false
+it is down to the nation to continue to follow the restrictions and regulations instituted by the Superintendent of Public Health in conjunction with the health division and the government to overcome this pandemic together.
+The continuous adherence to public health measures and regulations set by the public health authorities has significantly managed to bring down the active cases in Malta  ​
+false
+false
+true
+false
+was first reported in Wuhan, China. It has now spread across the world, causing global crisis and has been declared a pandemic 
+The first reported case of the COVID-19 virus was in Wuhan, China. Since then, the virus has spread globally, causing economic crisis and many deaths ​
+true
+false
+true
+false
+As of 22nd April 2020, a total of 2,575,875 COVID-19 cases, 178,669 deaths and 704,142 recoveries were reported (Worldometer 2020). The USA (up till 22nd April) is the highest COVID-19-affected country, with a total of 819,175 cases (2475 cases per 1 million population), with Spain as the runner up, with a total of 208,389 cases (4457 cases per 1 million population) (Worldometer 2020)
+There are more than 167 million registered cases worldwide, with 3.4 million deaths and more than 148 million recoveries ​
+false
+false
+true
+false
+It has, to date (22nd April), a total confirmed number of cases of 444 (1006 cases per 1 million population), out of which 276 are active cases, 165 have recovered and there were three deaths 
+Malta has had a total of 30,506 confirmed cases, with 30,017 recoveries, 72 active cases and 417 total deaths ​
+false
+false
+true
+false
+“Malta’s public health measures were an example to follow”
+The public health measures set by the authorities have been highly efficient, bringing down the active cases in Malta from 3000+ to 72 in just a few weeks ​
+true
+false
+true
+false
+The Maltese Islands (Malta and Gozo) situated in the middle of the Mediterranean Sea have a land area of 316 km2, with a total population of circa 492,000 and ranks the 7th most densely populated country in the world. Preparations for the possibility of coronavirus spread started early, from January 2020, two months prior to the first actual COVID-19 case reported in Malta on the 7th March 2020 (Times of Malta 2020a; Cordina 2020). Nonetheless, panic shopping and fear among the population started with the first reported COVID-19 case on the sister island of Sicily (Azzopardi and Hudson 2020; Caruana 2020a; Hudson 2020)
+Preparations for the pandemic started beforehand, but despite assignations from the authorities, panic buying and fear started shortly after the first case was registered in Sicily ​
+false
+false
+true
+true
+ws
+Was (grammatical error) ​
+false
+true
+false
+false
+Initially, swabbing was done only on travellers arriving from abroad and who were symptomatic. However, on establishing local transmission, the swabbing covered anyone with any symptoms as well as random swabbing on healthcare workers, carers working in elderly homes and among inhabitants under lockdown within an immigrant centre
+As stated, only abroad arrivals and symptomatic patients were swabbed. Later on, this was extended to account for local transmission ​
+false
+false
+true
+false
+closure of schools
+Secondary schools are currently re-opened ​
+false
+false
+true
+false
+universities
+Universities are still opting for an online method of teaching ​
+false
+false
+true
+false
+more than 3 persons
+People can meet in groups of 4 ​
+false
+false
+true
+false
+Simultaneously, increases in ventilator machines, intensive care beds and hospital beds capacity were inclemently implemented within the state hospital of Mater Dei, as well as other public and private hospitals
+Malta has invested in many ventilator machines in preparation for a predicted surge of COVID-19 cases. Furthermore, more ITU beds were added and further ITU’s were opened to account for the predicted surge.  ​
+false
+false
+true
+true
+Furthermore, plans for a prefabricated hospital to increase COVID-19 intensive treatment unit beds among other services are underway
+Plans for a pre-fabricated hospital were in place, these were later scrapped. ​
+false
+false
+true
+false
+(three in Malta and one in Gozo)
+There are 7 testing centres, in Pembroke, Ħal-Farruġ, Mater Dei Hospital, Qormi, Burmarrad, Boffa Hospital and Xewkija, Gozo ​
+false
+false
+true
+false
+Attendance to these sites is through an appointment system after symptomatic individuals call the COVID-19 helpline
+To book your swab test call the Public Health Helpline on 111 or +356 21324086 if you have a foreign number. The operators will take note of your personal details and you will be given an appointment to undergo this test closest to your place of residence. ​
+true
+false
+true
+false
+A strong advocacy campaign was set up by the Superintendent of Public Health, backed up by the Directorate of Public Health, Ministry for Health and the Government of Malta for social distancing, staying at home, encouragement of employers to provide telework facilities to all employees, as well as to maintain a good personal hygiene measures, including regular washing of hands with soap etc. 
+These measures were all undertaken in an effort to reduce the transmission rates in the Maltese islands​
+false
+false
+true
+false
+Helplines 
+A number of help lines have been set up to educate and help the Maltese population with coping with the pandemic ​
+true
+false
+true
+false
+Organizations and non-governmental organisations
+It uses two forms of English. The American and the British. It is imperative to stick to one or the other
+false
+true
+false
+false
+Public health division 
+The work done by the Malta Association of Public Health Medicine’s along with its workers was invaluable with bringing the COVID-19 virus in Malta under control ​
+false
+false
+true
+false
+Assistance for food and basic needs 
+A number of organisations set up food banks or food/basic aids services for those that have been economically challenged due to COVID-19 ​
+false
+false
+true
+false
+Financial aid packages
+The Government of Malta instituted various financial aid packages for the various companies, entities and families that experienced an economic disparity due to COVID-19 ​
+false
+false
+true
+false
+Other initiatives and solidarity
+Many companies have offered a helping hand with the pandemic, either through funding, or through changing their production lines to help however necessary ​
+true
+false
+true
+false
+Preventive measures initiated have reduced the air pollution and the frequency of asthma attacks in Malta
+Through social distancing, the closing down of schools and shifting of workplaces to a work-from-home environment and therefore the cleaner air, a drop in severe asthma attacks has been noticed​
+true
+false
+true
+true
+However, it is down to the population to abide to the directives and restrictions set up by the authorities, with special attention to social distancing, to keep this low spread constant and try to reduce the R0 value (Borg 2020). Nevertheless, this pandemic has brought fear, uncertainties, isolation and death. Countries’ economies have hit rock bottom, which may be unsustainable over a long period of time. It is only through a global effort of containment, vaccine research and solidarity shall this pandemic be overcome.
+It Is through the people’s will, sacrifice and teamwork will this pandemic be overcome. However, it is undeniable that the damage this pandemic has done to economies and the health of people will be felt for a long time. ​
+true
+false
+true
+false

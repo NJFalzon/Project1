@@ -13,13 +13,16 @@ public class TutorialScript : MonoBehaviour
     CursorMode cm = CursorMode.Auto;
     [SerializeField] Texture2D pointer;
 
+    [SerializeField] TextAsset article1;
+    [SerializeField] TextAsset article1List;
+
     List<Interactables> list = new List<Interactables>();
     void Start()
     {
         DISSERTATION = GameObject.Find("Dissertation").transform;
         EXPLAIN = GameObject.Find("Explain").transform;
 
-        text = DISSERTATION.GetChild(3).GetComponent<TMP_Text>();
+        text = DISSERTATION.GetChild(0).GetComponent<TMP_Text>();
 
         LoadTxtFiles();
     }
@@ -33,47 +36,36 @@ public class TutorialScript : MonoBehaviour
     List<Interactables> ReadList()
     {
         List<Interactables> inter = new List<Interactables>();
-        string pathList = "Assets/Resources/List.txt";
+        string[] article1list = article1List.text.Split("\n"[0]);
+        int listcounter = 0;
 
-        StreamReader reader = new StreamReader(pathList);
+        while (listcounter < article1list.Length-1)
+        {
+            Interactables temp = new Interactables();
+            temp.SetTitle(article1list[listcounter++]);
+            temp.SetText(article1list[listcounter++]);
 
-        while (!reader.EndOfStream){
-            Interactables tempI = new Interactables();
-            tempI.SetTitle(reader.ReadLine());
-            tempI.SetText(reader.ReadLine());
+            bool[] temp2 = new bool[4];
+            temp2[0] = article1list[listcounter++].Equals("true") ? true : false;
+            temp2[1] = article1list[listcounter++].Equals("true") ? true : false;
+            temp2[2] = article1list[listcounter++].Equals("true") ? true : false;
+            temp2[3] = article1list[listcounter++].Equals("true") ? true : false;
 
-            bool[] temp = new bool[4];
-            for (int j = 0; j < temp.Length; j++)
-            {
-                if (reader.ReadLine() == "true")
-                {
-                    temp[j] = true;
-                }
-                else
-                {
-                    temp[j] = false;
-                }
-            }
-
-            tempI.SetAnswers(temp);
-            inter.Add(tempI);
+            temp.SetAnswers(temp2);
+            inter.Add(temp);
         }
-
         return inter;
     }
 
     string ReadText()
     {
-        StreamReader reader = new StreamReader("Assets/Resources/Corrected.txt");
-        string text = reader.ReadToEnd();
-        reader.Close();
-
+        string text = article1.text;
         return text;
     }
 
     void LoadTxtFiles()
     {
-        DISSERTATION.GetChild(3).GetComponent<TextMeshProUGUI>().text = ReadText();
+        DISSERTATION.GetChild(0).GetComponent<TextMeshProUGUI>().text = ReadText();
         list = ReadList();
     }
 

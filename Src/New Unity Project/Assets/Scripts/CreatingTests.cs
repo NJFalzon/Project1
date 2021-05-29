@@ -92,11 +92,11 @@ public class CreatingTests : MonoBehaviour
         {
             if (temptxt.Contains(linkid + yellowMark))
             {
-                DISSERTATION.GetChild(3).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + yellowMark, linkid + greenMark);
+                DISSERTATION.GetChild(0).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + yellowMark, linkid + greenMark);
             }
             else if (temptxt.Contains(linkid + redMark))
             {
-                DISSERTATION.GetChild(3).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + redMark, linkid + greenMark);
+                DISSERTATION.GetChild(0).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + redMark, linkid + greenMark);
             }
         }
 
@@ -104,11 +104,11 @@ public class CreatingTests : MonoBehaviour
         {
             if (temptxt.Contains(linkid + yellowMark))
             {
-                DISSERTATION.GetChild(3).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + yellowMark, linkid + redMark);
+                DISSERTATION.GetChild(0).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + yellowMark, linkid + redMark);
             }
             else if (temptxt.Contains(linkid + greenMark))
             {
-                DISSERTATION.GetChild(3).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + greenMark, linkid + redMark);
+                DISSERTATION.GetChild(0).GetComponent<TextMeshProUGUI>().text = temptxt.Replace(linkid + greenMark, linkid + redMark);
             }
         }
     }
@@ -151,8 +151,8 @@ public class CreatingTests : MonoBehaviour
 
     public void WriteTextFiles()
     {
-        string pathText = "Assets/Resources/Corrected.txt";
-        string pathList= "Assets/Resources/List.txt";
+        string pathText = "Assets/Resources/Article1Completed.txt";
+        string pathList= "Assets/Resources/Article1List.txt";
 
         File.WriteAllText(pathList, interactables[0].ToString(textInfo.linkInfo[0].GetLinkText()));
         for (int i = 1; i < interactables.Count; i++)
@@ -166,7 +166,7 @@ public class CreatingTests : MonoBehaviour
     List<Interactables> ReadTextFiles()
     {
         List<Interactables> inter = new List<Interactables>();
-        string pathList = "Assets/Resources/List.txt";
+        string pathList = "Assets/Resources/Article2List.txt";
 
         StreamReader reader = new StreamReader(pathList);
 
@@ -197,7 +197,7 @@ public class CreatingTests : MonoBehaviour
 
     List<Interactables> SetInteractables()
     {
-        if (File.Exists("Assets/Resources/List.txt"))
+        if (File.Exists("Assets/Resources/Article1List.txt"))
         {
             return ReadTextFiles();
         }
@@ -210,18 +210,13 @@ public class CreatingTests : MonoBehaviour
     void LoadText()
     {
         string text;
-        StreamReader reader;
-        if (File.Exists("Assets/Resources/Corrected.txt"))
-        {
-            reader = new StreamReader("Assets/Resources/Corrected.txt");   
-        }
-        else
-        {
-            reader = new StreamReader("Assets/Resources/Default.txt");
-        }
+        StreamReader reader; 
+       
+        reader = new StreamReader("Assets/Resources/Article1.txt");
+        
         text = reader.ReadToEnd();
         reader.Close();
 
-        DISSERTATION.GetChild(3).GetComponent<TextMeshProUGUI>().text = text;
+        DISSERTATION.GetChild(0).GetComponent<TextMeshProUGUI>().text = text;
     }
 }

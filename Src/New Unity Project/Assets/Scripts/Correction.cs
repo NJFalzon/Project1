@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -16,6 +17,9 @@ public class Correction : MonoBehaviour
     Transform ANSWEREDPAPER;
     Transform EXPLANATION;
 
+    [SerializeField] TextAsset article2;
+    [SerializeField] TextAsset article2List;
+
     [SerializeField] Texture2D pointer;
     CursorMode cm = CursorMode.Auto;
     private void Awake()
@@ -30,17 +34,7 @@ public class Correction : MonoBehaviour
         correct = CORRECTEDPAPER.GetChild(1).GetComponent<TextMeshProUGUI>();
         student = ANSWEREDPAPER.GetChild(1).GetComponent<TextMeshProUGUI>();
 
-        StreamReader reader = new StreamReader("Assets/Resources/Correct.txt");
-        correct.text = reader.ReadToEnd();
-        reader.Close();
-
-        reader = new StreamReader("Assets/Resources/List.txt");
-        while (!reader.EndOfStream)
-        {
-            Interactables temp = new Interactables();
-            correctList.Add(temp.ToInteractables(reader));
-        }
-        reader.Close();        
+        correct.text = article2.ToString();
 
         student.text = TestScript.finishedText;
         answeredList = TestScript.finishedList;
@@ -50,6 +44,8 @@ public class Correction : MonoBehaviour
     {
         correct.ForceMeshUpdate();
         student.ForceMeshUpdate();
+
+        correctList = ReadTextFiles();
 
         EXPLANATION.GetChild(2).GetComponent<TextMeshProUGUI>().text = Correct(); 
     }
@@ -76,7 +72,10 @@ public class Correction : MonoBehaviour
             {
                 if(student.text.Contains(tempAnswered + greenMark))
                 {
-                    points++;
+                    if (answeredList[i].GetAnswers().SequenceEqual(correctList[i].GetAnswers()))
+                    {
+                        points++;
+                    }
                 }
             }
 
@@ -84,22 +83,46 @@ public class Correction : MonoBehaviour
             {
                 if (student.text.Contains(tempAnswered + redMark))
                 {
-                    points++;
+                    if (answeredList[i].GetAnswers().SequenceEqual(correctList[i].GetAnswers()))
+                    {
+                        points++;
+                    }
                 }
             }
             totalPoints++;
         }
 
-        for(int i = 0; i < correct.textInfo.linkCount; i++)
-        {
-            int2 temp = correctList[i].Compare(answeredList[i]);
-            points += temp.x;
-            totalPoints += temp.y;
-        }
+        
+            
+        
 
         float mark = (float)points / totalPoints;
         mark *= 100;
-        return "You got: " + mark.ToString("00") + "%";
+        return "You got: " + mark.ToString("##0") + "%";
+    }
+
+    List<Interactables> ReadTextFiles()
+    {
+        List<Interactables> inter = new List<Interactables>();
+        string[] article2list = article2List.text.Split("\n"[0]);
+        int listcounter = 0;
+
+        while (listcounter < article2list.Length - 1)
+        {
+            Interactables temp = new Interactables();
+            temp.SetTitle(article2list[listcounter++]);
+            temp.SetText(article2list[listcounter++]);
+
+            bool[] temp2 = new bool[4];
+            temp2[0] = article2list[listcounter++].Equals("true") ? true : false;
+            temp2[1] = article2list[listcounter++].Equals("true") ? true : false;
+            temp2[2] = article2list[listcounter++].Equals("true") ? true : false;
+            temp2[3] = article2list[listcounter++].Equals("true") ? true : false;
+
+            temp.SetAnswers(temp2);
+            inter.Add(temp);
+        }
+        return inter;
     }
 
     void ShowAnswers()

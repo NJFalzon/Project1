@@ -21,6 +21,7 @@ public class TestScript : MonoBehaviour
     public static string finishedText;
     public static List<Interactables> finishedList;
 
+    [SerializeField] TextAsset article2;
 
     void Start()
     {
@@ -41,12 +42,7 @@ public class TestScript : MonoBehaviour
 
     void LoadDefaultThesis()
     {
-        StreamReader reader = new StreamReader("Assets/Resources/Default.txt");
-        string text = reader.ReadToEnd();
-        reader.Close();
-
-        this.text.text = text;
-        THESIS.GetComponentInChildren<TextMeshProUGUI>().text = text;
+        THESIS.GetComponentInChildren<TextMeshProUGUI>().text = article2.ToString();
     }
 
     List<Interactables> InstantiateList()
